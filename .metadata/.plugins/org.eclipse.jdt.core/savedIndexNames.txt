@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\shambk\Downloads\ITransform\JAVA Workspace\.metadata\.plugins\org.eclipse.jdt.core
+2512136665.index
+1865797976.index
+2664235063.index

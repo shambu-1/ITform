@@ -1,0 +1,22 @@
+package q4;
+
+import java.util.Scanner;
+
+public class PassOrFail {
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		
+		
+		System.out.println("Give the number of subjects");
+		int n =s.nextInt();
+		int [] a = new int[10];
+		for(int i =0; i<n;i++) {
+			System.out.println("Enter the mark of subject "+ (i+1));
+			a[i] = s.nextInt();
+		}
+
+	}
+
+}

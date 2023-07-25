@@ -1,0 +1,33 @@
+package qOne;
+
+public class ArmstongNumber {
+	
+	public boolean isArmstrong(int a){
+		int real = a;
+		int sumq = 0;
+		while(real >0) {
+			sumq = sumq+((real%10)*(real%10)*(real%10));
+			real = real/10;
+		}
+		if(sumq != a) return false;
+		
+		return true;
+		
+		
+	}
+	
+	
+	public static void main(String [] args) {
+		ArmstongNumber a = new ArmstongNumber();
+		
+		int n = 153;
+		System.out.println("Is the number "+ n+ " an Armstrong number : " + a.isArmstrong(n));
+		
+		
+		System.out.println("Armstrong number with in range 100 to 999 : ");
+		for(int i = 100 ; i<1000 ; i++) 
+			if(a.isArmstrong(i)) System.out.println(i);
+		System.out.println();
+	}
+
+}

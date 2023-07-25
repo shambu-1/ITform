@@ -1,0 +1,81 @@
+package qAmith;
+
+import java.util.Scanner;
+
+public class DateDiff {
+
+	public static int monthdays(int m) {
+		int days = 0;
+		switch (m) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12: {
+			days = 31;
+			break;
+		}
+		case 2: {
+			days = 28;
+			break;
+		}
+		default:
+			days = 30;
+		}
+		return days;
+	}
+	
+	
+	static int leapyearcheck(int y){
+		int days = 365;
+		if((y%4 == 0 && y%100 != 0) || y%400 == 0) {
+			days = 366;
+		}
+		return days;
+	}
+	
+	public static int YearDiff(int m, int n) {
+		int days = 0;
+		for(int i = m;i<n;i++)
+			days = days + leapyearcheck(i);
+		return days;
+	}
+
+	public static int monDiff(int m, int n) {
+		int days = 0;
+		for (int i = m; i < n; i++) {
+			days = days + monthdays(i);
+		}
+		return days;
+	}
+
+	public static int dayDiff(int m, int n) {
+		int days = n - m;
+		return days;
+	}
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		int[] date1 = new int[3];
+		int[] date2 = new int[3];
+
+		System.out.println("Enter date 1 (DD,MM,YY)");
+		for (int i = 0; i < 3; i++)
+			date1[i] = s.nextInt();
+		System.out.println("Enter date 2 (DD,MM,YY)");
+		for (int i = 0; i < 3; i++)
+			date2[i] = s.nextInt();
+		System.out.println("total days between "
+			+date1[0]+"/"+date1[1]+"/"+date1[2]+" and "
+				+date2[0]+"/"+date2[1]+"/"+date2[2]+" are " 
+					+(YearDiff(date1[2], date2[2]) 
+					+ monDiff(date1[1], date2[1]) 
+					+ dayDiff(date1[0], date2[0])));
+ 
+		s.close();
+	}
+
+}

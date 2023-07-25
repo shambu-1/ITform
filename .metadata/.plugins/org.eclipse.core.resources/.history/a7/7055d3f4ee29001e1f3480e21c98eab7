@@ -1,0 +1,16 @@
+package qThree;
+
+public class SimpleAndCompoundInterest {
+
+	
+	public float SimpleInterest(int p) {
+		float r = 6.5f;
+		int t = 1;
+		float si = p*r*t;
+		return si;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

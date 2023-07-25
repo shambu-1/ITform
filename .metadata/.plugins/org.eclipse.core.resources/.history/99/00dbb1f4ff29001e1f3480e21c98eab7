@@ -1,0 +1,9 @@
+package q5;
+
+public class IncomeTax {
+
+	public void Tax(long )
+	public static void main(String[] args) {
+		
+	}
+}

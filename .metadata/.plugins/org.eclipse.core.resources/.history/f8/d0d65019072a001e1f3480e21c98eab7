@@ -1,0 +1,32 @@
+package qAmith;
+
+import java.util.Scanner;
+
+public class DateDiff {
+	
+	static void diffYear(int yy1, int yy2) {
+		int dy = (yy2-yy1)*365;
+		if(dy < 0) dy = dy*(-1);
+	}
+	static void diffMonth(int mm1, int mm2) {
+		int dy = (mm2-mm1)*30;
+		if(dy < 0) dy = dy*(-1);
+	}
+	static void diffDay(int dd1, int dd2) {
+		int dy = dd2-dd1;
+		if(dy < 0) dy = dy*(-1);
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		int dd1 = s.nextInt();
+		int mm1 = s.nextInt();
+		int yy1 = s.nextInt();
+		int dd2 = s.nextInt();
+		int mm2 = s.nextInt();
+		int yy2 = s.nextInt();
+		
+	}
+
+}

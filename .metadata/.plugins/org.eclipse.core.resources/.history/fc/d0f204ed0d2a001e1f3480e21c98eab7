@@ -1,0 +1,79 @@
+package qAmith;
+
+import java.util.Scanner;
+
+public class DateDiff {
+
+//	static int diffYear(int yy1, int yy2) {
+//		int dy = (yy2-yy1)*365;
+//		if(dy < 0) dy = dy*(-1);
+//		return dy;
+//	}
+//	static int diffMonth(int mm1, int mm2) {
+//		
+//		int days = 0;		
+//		int dy = (mm2-mm1)*30;
+//		if(dy < 0) dy = dy*(-1);
+//		return dy;
+//	}
+//	static int diffDay(int dd1, int dd2) {
+//		int dy = dd2-dd1;
+//		if(dy < 0) dy = dy*(-1);
+//		return dy;
+//	}
+
+	public static int monthdays(int m) {
+		int days = 0;
+		switch (m) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12: {
+			days = 31;
+			break;
+		}
+		case 2: {
+			days = 28;
+			break;
+		}
+		default:
+			days = 30;
+		}
+		return days;
+	}
+
+	public static int monDiff(int m, int n) {
+		int days = 0;
+		for (int i = m; i < n; i++) {
+			days = days + monthdays(i);
+		}
+		return days;
+	}
+	public static int dayDiff(int m, int n) {
+	
+	return 0;
+	}
+	
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		int[] date1 = new int[3];
+		int[] date2 = new int[3];
+
+//		System.out.println("Enter date 1 (DD,MM,YY)");
+//		for (int i = 0; i < 3; i++)
+//			date1[i] = s.nextInt();
+//		System.out.println("Enter date 2 (DD,MM,YY)");
+//		for (int i = 0; i < 3; i++)
+//			date2[i] = s.nextInt();
+System.out.println(monDiff(1, 2));
+		
+//		System.out.println("total days = "+ (diffDay(date1[0], date2[0])+diffMonth(date1[1], date1[1])+diffYear(date1[2], date1[2])));
+		s.close();
+	}
+
+}
